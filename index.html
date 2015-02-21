@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDevQuiz App</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+    	.navbar-brand {
+    		font-size:1.8em;
+    	}
+
+    	#topContainer{
+    		background-image: url("title.jpg");
+    		height:400px;
+    		width:100%;
+    		background-size:cover;
+    	}
+
+    	#topRow{
+    		margin-top:100px;
+    		text-align:center;
+
+    	}
+
+    	#topRow h1{
+    		font-size:300%;
+    		color:white;
+    	}
+
+    	.bold{
+    		font-weight:bold;
+    	}
+
+    	.marginTop{
+    		margin-top:30px;
+    	}
+
+    	.center{
+    		text-align:center;
+    	}
+
+    	.title{
+    		margin-top:100px;
+    		font-size:300%;
+    	}
+
+    	#footer{
+    		background-color:#3498db;
+    		padding-top:70px;
+    		width:100%;
+    	}
+
+    	.marginBottom{
+    		margin-bottom:30px;
+    	}
+
+    	.appstoreImage{
+    		width:250px;
+    	}
+
+    	.white{
+    		color:white;
+    	}
+
+    	@media (max-width:992px) { 
+    		.tablet{
+    			display: none;
+    		}
+
+    	 }
+    	
+
+    </style>	
+
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand">WebDevQuiz</a>
+    		</div>
+    		
+    		<div class="collapse navbar-collapse">
+    			<ul class="nav navbar-nav">
+    				<li><a href="#home">Home</a></li>
+    				<li><a href="#about">About</a></li>
+    				<li><a href="#footer">Download The App</a></li>
+    			</ul>
+    		</div>		
+
+
+    	</div>	
+    </div>
+
+    <div class="container contentContainer" id="topContainer">	
+
+    	<div class="row" id="home">
+
+    		<div class="col-md-6 tablet" id="topRow">
+				<img src="image/tablet1.png">  			
+    		</div>
+    		<div class="col-md-6" id="topRow">
+
+    		<h1 class="marginTop">WebDevQuiz App</h2>
+
+    		<p class="lead white">HTML CSS and JavaScript</p> 	
+
+    		<p class="white">Test your knowledge on various web technologies and get a ranking.</p>	
+    		
+    		<p class="bold marginTop white">Intersted in the App? Download it for free here!<p>
+
+    		<form action="#footer">
+
+    				<input type="submit" value="Download App" class="btn btn-success btn-lg marginTop" />
+
+    		</form>	
+
+    			
+    		</div>
+    	</div>		
+
+    </div>	
+
+    <div class="container contentContainer">
+
+    	<div class="row" class="center" id="about">
+    		<h1 class="center title">What are the features of this app?</h1>
+    		<p class="lead center">Test your web devoplement skills with this app</p>
+    	</div>
+
+    	<div class="row marginBottom">
+
+    		<div class="col-md-4 marginTop">
+    			<h2><span class="glyphicon glyphicon-education"></span> Get Quized</h2>
+    			<p>A quiz app based on the technologies of the web development, test your web skills on this multiple choice test that fits on any size tablet and or phone devices.</p>
+    		</div>
+
+    		<div class="col-md-4 marginTop">
+    			<h2><span class="glyphicon glyphicon-th-list"></span> Get The Subject</h2>
+    			<p>There are subjects of HTML5, CSS3 and JavaScript ranging in a mix of levels of entry, intermediate, and advance more subjects and questions will come in future updates.</p>
+    		</div>
+
+    		<div class="col-md-4 marginTop">
+    			<h2><span class="glyphicon glyphicon-pencil"></span> Get The High Score</h2>
+    			<p>There is a score counter and a ranking system that saves your scores after each test. Keep track of your progress even challenge your fellow web developers to see who can archive the highest score.</p>
+    		</div>
+
+    	</div>
+
+    </div>	
+    	<div class="container contentContainer" id="footer">
+
+    		<div class="row">
+
+    			<h1 class="center title">Download The App!</h1>
+
+    			<p class="lead center">Really, Test your web development skills today for FREE!</p>
+
+    			<p class="center"><a href="https://play.google.com/store/apps/details?id=webdev.com.webdevsquiz" target="_blank"><img src="image/android.png" class="appstoreImage"/></a>
+    	</div> 	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+    	$(".contentContainer").css("min-height",$(window).height());
+
+ 		$(".nav a").on("click", function(){
+   		$(".nav").find(".active").removeClass("active");
+   		$(this).parent().addClass("active");
+		});
+
+    </script>
+
+  </body>
+</html>
